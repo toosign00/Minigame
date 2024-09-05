@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Stranger Things"> <!-- og:title -->
+    <meta property="og:url" content="https://toosign00.github.io/game.html"> <!-- og:url -->
+    <meta property="og:image" content="./image/og_image.png"> <!-- og:image -->
+    <title>카드 짝 맞추기</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> <!-- Normalize.css -->
+    <!-- 브라우저 간의 기본 스타일 차이를 최소화 하기 위해 사용 CSS -->
+    <link rel="stylesheet" href="./css/game.css"> <!-- game.css -->
+    <link rel="shortcut icon" href="./image/tab_icon.png" type="image/x-icon"> 
+    <link rel="icon" href="./image/tab_icon.png" type="image/x-icon">
+</head>
+
+<body> <!-- 바디 시작 -->
+    <main> <!-- 메인 시작 -->
+        <header> <!-- 헤더 시작 -->
+            <img src="./image/home_icon.svg" alt="홈 아이콘" id="home-icon" style="cursor: pointer;">
+            <h1 class="title">STAGE 1</h1>
+            <h1 class="title" id="timer">60</h1>
+        </header> <!-- 헤더 끝 -->
+        <section> <!-- 섹션 시작 -->
+            <div class="grid-container" id="grid-container"> <!-- 카드 그리드 컨테이너 -->
+                <!-- 자바스크립트로 조작되어 카드 요소들이 여기에 추가됨 -->
+            </div> 
+            <div class="modal"> <!-- 게임오버 모달 -->
+                <h1 class="title">GAME OVER</h1>
+                <div class="modal-btn-container">
+                    <button class="modal-btn" id="retry">RETRY!</button>
+                    <button class="modal-btn" id="home">HOME</button>
+                </div>
+                <div class="modal-btn-container-2">
+                    <h1 class="title" id="score-box">YOUR SCORE : STAGE 3</h1>
+                    <input type="text" placeholder="닉네임을 입력하세요." class="name-input">
+                    <button class="modal-btn" id="send-btn">SEND</button>
+                </div>
+            </div>
+
+            <div class="modal-2"> <!-- 스테이지 클리어 모달 -->
+                <h1 class="title">STAGE CLEAR!</h1>
+                <div class="modal-btn-container">
+                    <button class="modal-btn" id="next-stage">NEXT STAGE</button>
+                </div>
+            </div>
+        </section> <!-- 섹션 끝 -->
+    </main> <!-- 메인 끝 -->
+
+    <script src="./script/game.js"></script> <!-- 게임 로직을 담당하는 자바스크립트 파일 -->
+
+</body>
+
+</html>
